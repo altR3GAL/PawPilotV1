@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPilot - Coding Assistant</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="dark_mode_logo.png" alt="PawPilot Logo" class="logo">
+        <h1>PawPilot Coding Assistant</h1>
+    </header>
+    <main>
+        <section id="about" class="about-section">
+            <h2>What is PawPilot?</h2>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body">
+                    PawPilot is your personal homework assistant designed by students for students. Our application features three simple yet intelligent functionalities:
+                </div>
+                <div class="card-body">
+                    -Explanation
+                </div>
+                <div class="card-body">
+                    -Resource Review
+                </div>
+                <div class="card-body">
+                    -Critical Thinking Promotion
+                </div>
+                <div class="card-body">
+                    Together, these features empower students to excel in their assignments, regardless of ability, by promoting critical thinking.
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body">
+                    For explanations of assignments use the Assignment Breakdown Assistant.
+                </div>
+            </div>
+            <div class="feature-buttons">
+                <a href="pageOne/assignment-breakdown.html" class="feature-button">Assignment Breakdown</a>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body">
+                    For online resources to help learn unfamiliar concepts use the Resource Linking Assistant.
+                </div>
+            </div>
+            <div class="feature-buttons">
+                <a href="pageTwo/resource-assistant.html" class="feature-button">Resource Linking</a>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body">
+                    For feedback on your code use the Code Analysis Assistant.
+                </div>
+            </div>
+            <div class="feature-buttons">
+                <a href="pageThree/code-analysis.html" class="feature-button">Code Analysis</a>
+            </div>
+        </section>
+        <section id="faq" class="my-5">
+            <h2 class="text-center mb-3">FAQs</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Who is PawPilot built for?
+                        </div>
+                    </div>
+        
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            PawPilot was built to be used by every student, anyone who wants to learn how to code.
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other FAQs -->
+            </div>
+        </section>
+        <section id="faq" class="my-5">
+            <h2 class="text-center mb-3">Contact US</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Email: kass.h@northeastern.edu and xiao.dav@northeastern.edu
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other FAQs -->
+            </div>
+        </section>
+    <section id="pic" class="my-5"> <!-- Closing tag of the FAQ section -->
+    <img src="team_photo.jpg" alt="Our Team" class="team-photo">
+    </section>
+    </main>
+    <footer>
+        <a href="pageThree/signed.html" class="feature-button">2024 PawPilot. All rights reserved.</a>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+          });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.getElementById('cursor');
+        
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+        
+            document.querySelectorAll('a, button, .feature-button').forEach(elem => {
+                elem.addEventListener('mouseover', () => {
+                    cursor.classList.add('cursor-hover');
+                });
+        
+                elem.addEventListener('mouseout', () => {
+                    cursor.classList.remove('cursor-hover');
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const cursor = document.getElementById('cursor');
+      
+          document.addEventListener('mousemove', e => {
+              cursor.style.left = e.pageX + 'px';
+              cursor.style.top = e.pageY + 'px';
+          });
+          document.querySelectorAll('a, button, .feature-button').forEach(elem => {
+              elem.addEventListener('mouseover', () => {
+                  cursor.classList.add('cursor-hover');
+              });
+      
+              elem.addEventListener('mouseout', () => {
+                  cursor.classList.remove('cursor-hover');
+              });
+          });
+        });
+      </script>
+    <div class="cursor" id="cursor"></div>
+    <div class="loading-spinner"></div>
+</body>
+</html>

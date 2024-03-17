@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #0A0A0A;
+    color: #fff;
+    position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+#chat-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #FF4500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#back-button a {
+    text-decoration: none;
+    color: white;
+}
+
+#form-section {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#message-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #222;
+}
+
+#message-input {
+    height: 70%;
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    overflow-y: hidden; /* Prevent scroll bar */
+    resize: none; /* Prevent resizing */
+    white-space: pre-wrap; /* Ensure wrapping at the end of the container */
+    word-wrap: break-word; /* Break words to prevent horizontal scrolling */
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #FF4500;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E04000;
+}
+
+#messages-section {
+    flex-basis: 50%;
+    overflow-y: auto;
+    background-color: #1E1E1E;
+    padding: 20px;
+}
+
+.message p, .user-message p, .ai-message p {
+    max-width: 70%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user-message p {
+    background-color: #FF4500;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.ai-message p {
+    background-color: #555;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}

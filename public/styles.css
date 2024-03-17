@@ -1,0 +1,153 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, form, ul, li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; /* Increased base font size for better readability */
+}
+
+body {
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(45deg, #ff5555, #ff0000); /* Vibrant gradient header */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.logo {
+    width: 205px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #121212;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 5rem; /* Increase font size from 2.5rem to 3.5rem for bigger title text */
+    color: #ffffff; /* Keep the color styling as is */
+}
+
+h2, h3 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Uniform vibrant red for headings */
+}
+
+p {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.team-photo {
+    display: block;
+    margin: 20px auto; /* Center the image and add some margin above and below */
+    max-width: 80%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+.feature-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-button {
+    background-color: #d10000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.feature-button:hover, .feature-button:focus {
+    background: linear-gradient(45deg, #a80000, #900);
+    color: #ffffff;
+    outline: none;
+    transform: translateY(-5px);
+}
+
+/* Styling for the About Section */
+.about-section {
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.about-heading {
+    color: #FF5555;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-description, .feature-list li {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-description {
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.feature-list li {
+    background-color: #d10000;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Cursor & Loading Spinner */
+.cursor-hover {
+    border-color: #ff5555;
+}
+
+.loading-spinner {
+    border-top: 4px solid #ff5555;
+}
+
+footer {
+    background-color: #121212;
+    color: #ff0000;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 40px; /* Added spacing before the footer */
+}
