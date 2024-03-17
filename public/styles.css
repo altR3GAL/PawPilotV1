@@ -79,21 +79,57 @@ p {
 }
 
 .feature-button {
-    background-color: #d10000;
-    color: #ffffff;
+    background-color: #ff7b00; /* Orange background */
+    width: 254px; /* Width of the orange rectangle */
+    height: 56px; /* Height of the orange rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+    color: #ffffff; /* Text color */
+    font-size: 1rem; /* Adjust based on your preference and space */
+    border-radius: 2px; /* Optional: adds a slight rounded corner */
+    line-height: 20px; /* Ensure this matches the height if you want the text vertically centered */
+    padding: 10px 15px; /* Adjusted padding for text alignment and size */
+    border: 2px solid transparent; /* Add border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Pronounced shadow for 3D effect */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Smooth transitions */
 }
 
 .feature-button:hover, .feature-button:focus {
-    background: linear-gradient(45deg, #a80000, #900);
+    background: linear-gradient(45deg, #ff9000, #ff5000); /* Gradient on hover for visual interest */
     color: #ffffff;
     outline: none;
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Increased shadow on hover for more depth */
+    border-color: #ff4500; /* Change border color on hover/focus for effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+
 }
+
+.button-background {
+    background-color: #ff6f00; /* Red background */
+    width: 236px; /* Width of the red rectangle */
+    height: 46px; /* Height of the red rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center the button-background if inside a larger container */
+    border-radius: 4px; /* Optional: adds a slight rounded corner to the background */
+}
+
+
+.features-container {
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: auto; /* Adjust the max-width as needed */
+    margin-left: auto; /* Centering the container */
+    margin-right: auto; /* Centering the container */
+}
+
 
 /* Styling for the About Section */
 .about-section {
@@ -141,6 +177,12 @@ p {
 
 .loading-spinner {
     border-top: 4px solid #ff5555;
+}
+
+.card-body {
+    margin-bottom: 20px; /* Increase bottom margin for more space between card bodies */
+    padding: 15px; /* Increase padding for more internal space */
+    /* Other styling remains unchanged */
 }
 
 footer {
