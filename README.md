@@ -63,3 +63,5 @@ We split our project into two parts: **front-end** and **back-end**.
 PawHacks 2024 AI Track Winner: [Devpost Project](https://devpost.com/software/pawhacks-chmd)
 
 ![Finished Project](finishedfinally.jpg)
+
+(Pictured Above) Hudson Kass and David Xiao posed behind finished PawPilot at 7:41 AM 
