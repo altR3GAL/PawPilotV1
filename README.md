@@ -1,67 +1,103 @@
-# PawHacks CHMD
+# ***`PawPilotV1`***
 
-## Inspiration
+[Overview](#overview) | [Features](#features) | [Installation](#installation) | [Usage](#usage) | [Project Structure](#project-structure) | [API Endpoints](#api-endpoints) | [Configuration](#configuration) | [Contributing](#contribution-guidelines) | [License](#license)
 
-- **Extremely high dropout rates** in our initial fundamental classes.
-- **Disparity in socioeconomic backgrounds** of people who got into coding.
-- Noticed that teachers worked extremely hard but didn't always have **enough time** to help each individual student.
+> [!IMPORTANT]
+> PawPilotV1 is a Node.js and Express-based web application.
 
-## What It Does
+## Overview
 
-Our website is broken down into **3 simple features**:
+PawPilotV1 is a web application that allows users to track pet information, schedule appointments, and manage pet care routines efficiently. The application provides an intuitive interface with seamless backend integration.
 
-1. **Explanation:** Allows users to paste in starter code from the teacher, breaking it down into manageable steps, teaching students how to turn a large problem into simple steps.
-2. **Resources:** Provides users with easy access to resources for any assignment they are working on, helping beginners get a great initial step.
-3. **Review:** Reviews users' code and provides feedback in the form of strengths/weaknesses, efficiency improvements, and things to consider for next time. It's the "take away" feature that acts like a personal tutor for the students.
+## Features
 
-## Our Roles
+- **User Authentication**: Secure login and registration system.
+- **Pet Profiles**: Manage multiple pet profiles with health records.
+- **Appointment Scheduling**: Book and track veterinary and grooming appointments.
+- **Notifications**: Receive reminders for upcoming appointments.
+- **API Support**: RESTful API endpoints for integration with other services.
 
-- **David Xiao:** Full Stack Developer
-- **Hudson Kass:** Full Stack Developer
-- **Caleb Harper:** Front-End Developer
+## Installation
 
-## How We Built It
+### Prerequisites
 
-We split our project into two parts: **front-end** and **back-end**.
+- **Node.js v14+**
+- **MongoDB (for data persistence)**
 
-- **David** and **Hudson** initially did our research on the GPT API and how to call custom GPT's from the backend.
-- **Caleb** started researching for the website design.
-- We used **Node.js** to run the backend with **HTML** and **CSS** for our website.
-- Spent hours on the documentation trying to learn and understand it before we saw any progress.
+### Steps
 
-## Challenges We Ran Into
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/altR3GAL/PawPilotV1.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd PawPilotV1
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the server:
+   ```sh
+   npm start
+   ```
 
-- The OpenAI API was extremely complicated for David and Hudson, who had limited back-end experience.
-- Initially attempted to make a chrome extension but found it couldn't integrate the OpenAI API.
-- Half of the team was unable to work due to unforeseen circumstances, requiring David and Hudson to complete the back-end on their own and assist Caleb with the front end.
-- Disagreements occurred, but our group was always able to compromise after some discussion.
+## Usage
 
-## Accomplishments That We're Proud Of
+### Running the Application
 
-- Successfully integrating the API with each of the 3 features on our website.
-- Creating a clean and modern website design.
-- Making our project easy to understand/learn.
-- Addressing a real-world problem, especially one that affects our community.
+1. Ensure MongoDB is running.
+2. Start the backend using `npm start`.
+3. Open `http://localhost:3000` in your browser.
+4. Register or log in to manage pet profiles and appointments.
 
-## What We Learned
+## Project Structure
 
-- Always expect the unexpected.
-- Things often get worse before they get better.
-- Found help in the most unlikely places (GSB at 4am).
-- The importance of taking short breaks when stuck.
-- The value of having a plan before starting.
+```plaintext
+PawPilotV1/
+├── public/ (Static frontend assets)
+│   ├── styles.css
+│   ├── images/
+├── views/ (Handlebars templates)
+│   ├── index.hbs
+│   ├── login.hbs
+├── routes/ (API routes)
+│   ├── pets.js
+│   ├── users.js
+├── models/ (Database models)
+│   ├── Pet.js
+│   ├── User.js
+├── server.js (Main server entry point)
+├── package.json
+├── README.md
+```
 
-## What's Next for PawPilot
+## API Endpoints
 
-- Hosting the site online 24/7 so anyone can access it.
-- Improving and integrating coding assistants.
-- Developing our own coding assistant that dynamically helps users as they code.
-- Partnering with faculty to help promote coding to everyone.
+- **`GET /api/pets`** - Retrieve all pets
+- **`POST /api/pets`** - Add a new pet
+- **`GET /api/users`** - Retrieve user details
+- **`POST /api/users/register`** - Register a new user
 
-## PawPilot Awards
+## Configuration
 
-PawHacks 2024 AI Track Winner: [Devpost Project](https://devpost.com/software/pawhacks-chmd)
+Environment variables can be set in a `.env` file:
+```plaintext
+PORT=3000
+MONGO_URI=mongodb://localhost:27017/pawpilot
+JWT_SECRET=your_secret_key
+```
 
-![Finished Project](finishedfinally.jpg)
+## Contribution Guidelines
 
-(Pictured Above) Hudson Kass and David Xiao posed behind finished PawPilot at 7:41 AM 
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Commit changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a **Pull Request**.
+
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
